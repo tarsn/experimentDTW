@@ -16,7 +16,7 @@ class DTW:
     def create_cost_matrix(self, x: np.ndarray, y: np.ndarray) -> np.ndarray:
         """Create the cost matrix between two sequences."""
         # Initialize the cost matrix
-        n, m = np.shape(x)[0], np.shape(y)[0]
+        n, m = len(x), len(y)
         cost_matrix = np.zeros((n, m))
         
         # Fill the cost matrix with distances
